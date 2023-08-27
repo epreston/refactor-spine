@@ -21,6 +21,8 @@
     "GPUTextureUsage": "readonly",
     "opentype": "readonly",
     "pc": "readonly",
+    "spine": "readonly",
+    "semver": "readonly",
     "TWEEN": "readonly",
     "twgsl": "readonly",
     "webkitAudioContext": "readonly",
