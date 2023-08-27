@@ -4,7 +4,7 @@ import './base.css';
 import * as pc from 'playcanvas';
 
 // the spine plugin
-import { plugin } from './plugin/spine-plugin.js';
+import { plugin } from './plugin/SpinePlugin.js';
 
 const assets = {
     skeleton: new pc.Asset('skeleton', 'json', {
