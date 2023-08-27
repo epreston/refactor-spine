@@ -34,6 +34,6 @@
         /* Completeness */
         "skipLibCheck": true
     },
-    "input": ["src", "test"],
+    "input": ["src"],
     "exclude": ["node_modules", "**/node_modules/*", "dist"]
 }
