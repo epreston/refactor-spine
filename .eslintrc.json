@@ -11,22 +11,8 @@
   },
   "extends": "@playcanvas/eslint-config",
   "globals": {
-    "Ammo": "readonly",
-    "earcut": "readonly",
-    "glslang": "readonly",
-    "GPUBufferUsage": "readonly",
-    "GPUColorWrite": "readonly",
-    "GPUMapMode": "readonly",
-    "GPUShaderStage": "readonly",
-    "GPUTextureUsage": "readonly",
-    "opentype": "readonly",
     "pc": "readonly",
     "spine": "readonly",
-    "semver": "readonly",
-    "TWEEN": "readonly",
-    "twgsl": "readonly",
-    "webkitAudioContext": "readonly",
-    "XRRay": "readonly",
-    "XRWebGLLayer": "readonly"
+    "semver": "readonly"
   }
 }
