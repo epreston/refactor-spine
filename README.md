@@ -1,6 +1,7 @@
-# PlayCanvas Web Project
+# Refactor PlayCanvas Spine 
 
-Repo Template: playcanvas ecosystem
+Refactor: https://github.com/playcanvas/playcanvas-spine
+Issue: https://github.com/playcanvas/playcanvas-spine/issues/79
 
 [![CI][ci-badge]][ci-url]
 

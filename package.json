@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "name": "playcanvas-template",
+  "name": "refactor-playcanvas-spine",
   "version": "0.1.0",
   "license": "MIT",
   "files": [
