@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 import { Asset, Component, path as resourcePath } from 'playcanvas';
 
 import { Spine } from './Spine.js';
@@ -24,11 +25,13 @@ class SpineComponent extends Component {
         const textureData = {};
         for (let i = 0, n = this.textureAssets.length; i < n; i++) {
             const asset = this.system.app.assets.get(this.textureAssets[i]);
+
             let path = asset.name
                 ? asset.name
                 : asset.file
-                ? asset.file.filename
-                : null;
+                    ? asset.file.filename
+                    : null;
+
             // Fallback if filename doesn't exist
             if (!path) {
                 path = resourcePath.getBasename(asset.file.url);

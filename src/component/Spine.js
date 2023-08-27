@@ -1,5 +1,6 @@
+/* eslint-disable operator-linebreak */
 import * as pc from 'playcanvas';
-import * as spine from "spine41";
+import * as spine from 'spine41';
 import semver from './semver/index.js';
 import { SpineTextureWrapper } from './SpineTextureWrapper.js';
 
@@ -61,7 +62,9 @@ class Spine {
             atlas = new spine.TextureAtlas(
                 atlasData,
                 // @ts-ignore
-                path => new SpineTextureWrapper(textureData[path])
+                (path) => {
+                    return new SpineTextureWrapper(textureData[path]);
+                }
             );
         }
 
@@ -280,12 +283,13 @@ class Spine {
         const name = attachment.name;
 
         // attachment can change on the slot
+        // prettier-ignore
         const type =
             attachment instanceof spine.RegionAttachment
                 ? ATTACHMENT_TYPE.REGION
                 : attachment instanceof spine.MeshAttachment
-                ? ATTACHMENT_TYPE.MESH
-                : ATTACHMENT_TYPE.NULL;
+                    ? ATTACHMENT_TYPE.MESH
+                    : ATTACHMENT_TYPE.NULL;
 
         if (slot._active.name !== name || slot._active.type !== type) {
             this.initAttachment(slot);

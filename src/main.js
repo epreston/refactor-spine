@@ -1,4 +1,6 @@
+// vite will process, minify, and manage css
 import './base.css';
+
 import * as pc from 'playcanvas';
 
 // the spine plugin
