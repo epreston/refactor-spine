@@ -1,17 +1,30 @@
-# Refactor PlayCanvas Spine 
+# Refactor PlayCanvas Spine
 
 Refactor: https://github.com/playcanvas/playcanvas-spine  
 Issue: https://github.com/playcanvas/playcanvas-spine/issues/79  
-Spine: https://github.com/EsotericSoftware/spine-runtimes  
+Spine: https://github.com/EsotericSoftware/spine-runtimes
 
 [![CI][ci-badge]][ci-url]
 
+## Summary
+
+Current implementation modifies the global "pc" variable to store its data. In the more modern and performant builds of pc engine, this does not work.
+
+The current implementation of spine needs to store data and make features available to every app instance that the global "pc" instance might create. It needs to persist it even when those app instances, scenes, or root nodes are destroyed. At the time, a clever and graceful solution was to tuck things neatly into the "pc" variable to make sure its available no matter what happens.
+
+While the chances for conflict are low, modern language features have been introduced to solve conflicts between vendor libraries. Unfortunately, the current approach is what a conflicting vendor library would do. If the spine plugin implementation took a different approach to meet those goals, this issue goes away.
+
+It seems a small refactor is required.
+
+This issue was first raised on the engine project here:
+https://github.com/playcanvas/engine/issues/5399
+
 ## Notes
 
-From 4.0, the latest patch version is on NPM.  for 3.6 and 3.8, its available as branches in the repo.
-To automate updates, npm versions are aliased to make multiple versions of the same package available to this project.  See package.json (spine40, spine41).
+From 4.0, the latest patch version is on NPM. for 3.6 and 3.8, its available as branches in the repo.
+To automate updates, npm versions are aliased to make multiple versions of the same package available to this project. See package.json (spine40, spine41).
 
-They provide iife builds and instructions to modify them for use as ESM exports.  Not ideal for an engine integration or plugin (its more targeted at inclusion in html headers).  For the rewrite, its better to generate esm from the typescript source for each version with:
+For older versions, EsotericSoftware provide iife builds and instructions to modify them for use as ESM exports. Not ideal for an engine integration or plugin (its more targeted at inclusion in html headers). For the rewrite, its better to generate esm from the typescript source for each version with:
 
 ```
 esbuild --bundle spine-ts/core/index.ts --target=es6 --sourcemap --outfile=spine.x.x.js --format=es
