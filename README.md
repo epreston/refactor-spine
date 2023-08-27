@@ -1,8 +1,8 @@
 # Refactor PlayCanvas Spine 
 
-Refactor: https://github.com/playcanvas/playcanvas-spine
-Issue: https://github.com/playcanvas/playcanvas-spine/issues/79
-Spine: https://github.com/EsotericSoftware/spine-runtimes
+Refactor: https://github.com/playcanvas/playcanvas-spine  
+Issue: https://github.com/playcanvas/playcanvas-spine/issues/79  
+Spine: https://github.com/EsotericSoftware/spine-runtimes  
 
 [![CI][ci-badge]][ci-url]
 
