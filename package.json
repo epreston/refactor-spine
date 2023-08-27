@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@playcanvas/eslint-config": "^1.7.0",
-    "eslint": "^8.47.0",
+    "eslint": "^8.48.0",
     "playcanvas": "^1.65.3",
     "prettier": "^3.0.2",
     "semver": "^7.5.4",
