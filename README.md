@@ -2,8 +2,22 @@
 
 Refactor: https://github.com/playcanvas/playcanvas-spine
 Issue: https://github.com/playcanvas/playcanvas-spine/issues/79
+Spine: https://github.com/EsotericSoftware/spine-runtimes
 
 [![CI][ci-badge]][ci-url]
+
+## Notes
+
+From 4.0, the latest patch version is on NPM.  for 3.6 and 3.8, its available as branches in the repo.
+To automate updates, npm versions are alaised to make multiple versions of the same package available to this project.  See package.json (spine40, spine41).
+
+They provide iife builds and instructions to modify them for use as ESM exports.  Not ideal for an engine integration or plugin (its more targeted at inclusion in html headers).  For the rewrite, its better to generate esm from the typescript source for each version with:
+
+```
+esbuild --bundle spine-ts/core/index.ts --target=es6 --sourcemap --outfile=spine.x.x.js --format=es
+```
+
+The next steps for the code are generating ESM bundles for 3.6 and 3.8 from the typescript source because vendor only publishes processed typescript to npm from 4.0. At that point, we need to remove the "context" (it needs to be top level undefined), introduce Babel to support language correct es5 and es6 targets (if translation is required), and flip the module setting accordingly.
 
 ## Setup
 
