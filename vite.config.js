@@ -5,8 +5,6 @@ import { defineConfig, splitVendorChunkPlugin } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [splitVendorChunkPlugin()],
-    // additional asset types
-    assetsInclude: ['**/*.gltf', '**/*.glb', '**/*.m4a'],
     build: {
         // minify: false,
         // assetsInlineLimit: 0,
@@ -21,7 +19,7 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 manualChunks(id) {
-                    // creating a chunk to semver deps. Reducing the vendor chunk size
+                    // creating a chunk to semver deps.
                     if (
                         id.includes('semver') ||
                         id.includes('yallist') ||
@@ -29,14 +27,14 @@ export default defineConfig({
                     ) {
                         return 'semver';
                     }
-                    // creating a chunk to playcanvas deps. Reducing the vendor chunk size
+                    // creating a chunk to playcanvas deps.
                     if (
                         id.includes('playcanvas') ||
                         id.includes('@playcanvas')
                     ) {
                         return 'playcanvas';
                     }
-                    // creating a chunk to spine-core deps. Reducing the vendor chunk size
+                    // creating a chunk to spine-core deps.
                     if (
                         id.includes('spine41') ||
                         id.includes('@esotericsoftware/spine-core') ||
