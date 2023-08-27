@@ -9,7 +9,7 @@ Spine: https://github.com/EsotericSoftware/spine-runtimes
 ## Notes
 
 From 4.0, the latest patch version is on NPM.  for 3.6 and 3.8, its available as branches in the repo.
-To automate updates, npm versions are alaised to make multiple versions of the same package available to this project.  See package.json (spine40, spine41).
+To automate updates, npm versions are aliased to make multiple versions of the same package available to this project.  See package.json (spine40, spine41).
 
 They provide iife builds and instructions to modify them for use as ESM exports.  Not ideal for an engine integration or plugin (its more targeted at inclusion in html headers).  For the rewrite, its better to generate esm from the typescript source for each version with:
 
