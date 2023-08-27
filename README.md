@@ -58,14 +58,15 @@ npm run dev
 
 ## Tools
 
-| Tool         | Reference                |
-| ------------ | ------------------------ |
-| PlayCanvas   | https://playcanvas.com   |
-| Node.js      | https://nodejs.org       |
-| Vite         | https://vitejs.dev       |
-| ESLint       | https://eslint.org       |
-| Prettier     | https://prettier.io      |
-| EditorConfig | https://editorconfig.org |
+| Tool         | Reference                   |
+| ------------ | --------------------------- |
+| PlayCanvas   | https://playcanvas.com      |
+| Spine        | http://esotericsoftware.com |
+| Node.js      | https://nodejs.org          |
+| Vite         | https://vitejs.dev          |
+| ESLint       | https://eslint.org          |
+| Prettier     | https://prettier.io         |
+| EditorConfig | https://editorconfig.org    |
 
 ## Ecosystem
 
@@ -79,18 +80,19 @@ npm run dev
 
 ## References
 
-| Website        | Reference                        |
-| -------------- | -------------------------------- |
-| PlayCanvas API | https://developer.playcanvas.com |
-| Can I Use      | https://caniuse.com              |
-| Browserslist   | https://browsersl.ist            |
-| WebGL2         | https://www.khronos.org/webgl/   |
-| glTF           | https://www.khronos.org/gltf/    |
-| Fundamentals   | https://webgl2fundamentals.org   |
+| Website            | Reference                                        |
+| ------------------ | ------------------------------------------------ |
+| PlayCanvas API     | https://developer.playcanvas.com                 |
+| Spine Runtimes API | http://esotericsoftware.com/spine-runtimes-guide |
+| Can I Use          | https://caniuse.com                              |
+| Browserslist       | https://browsersl.ist                            |
+| WebGL2             | https://www.khronos.org/webgl/                   |
+| glTF               | https://www.khronos.org/gltf/                    |
+| Fundamentals       | https://webgl2fundamentals.org                   |
 
 ## License
 
 This template is released under the MIT [License](LICENSE).
 
-[ci-badge]: https://github.com/epreston/template-web-playcanvas/actions/workflows/ci.yml/badge.svg
-[ci-url]: https://github.com/epreston/template-web-playcanvas/actions
+[ci-badge]: https://github.com/epreston/refactor-spine/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/epreston/refactor-spine/actions
