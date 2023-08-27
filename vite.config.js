@@ -36,11 +36,13 @@ export default defineConfig({
                     }
                     // creating a chunk to spine-core deps.
                     if (
+                        id.includes('spine40') ||
                         id.includes('spine41') ||
+                        id.includes('spine42') ||
                         id.includes('@esotericsoftware/spine-core') ||
                         id.includes('spine-core')
                     ) {
-                        return 'spine41';
+                        return 'spine-core';
                     }
                 }
             }
