@@ -23,6 +23,9 @@
     "eslint": "^8.47.0",
     "playcanvas": "^1.65.3",
     "prettier": "^3.0.2",
+    "semver": "^7.5.4",
+    "spine40": "npm:@esotericsoftware/spine-core@4.0",
+    "spine41": "npm:@esotericsoftware/spine-core@4.1",
     "typescript": "^5.1.6",
     "vite": "^4.4.9"
   }
