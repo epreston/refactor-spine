@@ -1,4 +1,6 @@
-# Refactor PlayCanvas Spine
+# Refactor PlayCanvas Spine (Archive)
+
+Completed: https://github.com/playcanvas/playcanvas-spine/pull/80
 
 Refactor: https://github.com/playcanvas/playcanvas-spine  
 Issue: https://github.com/playcanvas/playcanvas-spine/issues/79  
